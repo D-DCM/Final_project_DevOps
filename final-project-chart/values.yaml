@@ -1,0 +1,13 @@
+replicaCount: 2
+
+image:
+  repository: omerinio/final_project_flask
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 5000
+  nodePort: 30001
+
+containerPort: 5000

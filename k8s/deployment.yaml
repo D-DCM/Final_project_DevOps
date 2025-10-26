@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: final-project
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: final-project
+  template:
+    metadata:
+      labels:
+        app: final-project
+    spec:
+      containers:
+      - name: final-project
+        image: omerinio/final_project_flask:latest
+        ports:
+        - containerPort: 5000
