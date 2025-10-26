@@ -40,3 +40,6 @@ jobs:
           --set image.repository=${{ secrets.DOCKERHUB_USERNAME }}/final_project_flask \
           --set image.tag=${{ github.sha }} \
           --namespace default
+    # - name: Deploy with Helm
+    #   run: |
+    #   echo "Helm deployment step skipped because cluster is local"
